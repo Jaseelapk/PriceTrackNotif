@@ -62,16 +62,19 @@ public class EmailServiceTest {
 
 	// Test Scenario for failure in sending email
 	@Test
-	public void testSendNotification_Failure() {
-		// Arrange
-		doThrow(new MailException("Failed to send email") {
-		}).when(mailSender).send(any(SimpleMailMessage.class));
+    public void testSendNotification_Failure() {
+        // Arrange
+        doThrow(new MailException("Failed to send email") {
+        }).when(mailSender).send(any(SimpleMailMessage.class));
 
-		// Act
-		emailService.sendNotification("invalid-email", subject, body);
+        // Act & Assert
+        RuntimeException exception = assertThrows(RuntimeException.class, () -> {
+            emailService.sendNotification(toEmail, subject, body);
+        });
 
-		// Assert
-		verify(mailSender, times(1)).send(any(SimpleMailMessage.class));
-	}
+        // Assert
+        assertEquals("Failed to send email to " + toEmail, exception.getMessage());
+        verify(mailSender, times(1)).send(any(SimpleMailMessage.class));
+    }
 
 }
