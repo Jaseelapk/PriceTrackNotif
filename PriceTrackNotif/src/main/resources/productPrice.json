@@ -1,0 +1,28 @@
+[
+    {
+        "productUrl": "https://www.amazon.co.uk/Duracell-CR2032-Lithium-Coin-Batteries/dp/B01CG0TO76",
+        "productName": "Batteries",
+        "currentPrice": 5
+    },
+    {
+        "productUrl": "https://www.amazon.co.uk/Guess-How-Much-Love-You/dp/1406358789",
+        "productName": "Story Book",
+        "currentPrice": 6
+    },
+    {
+        "productUrl": "https://www.amazon.co.uk/Cars-3-Little-Sound-Book/dp/1503715213",
+        "productName": "Sound Toy",
+        "currentPrice": 4
+    },
+    {
+        "productUrl": "https://www.amazon.co.uk/gp/aw/d/B071X4RKZJ",
+        "productName": "Glass kettle",
+        "currentPrice": 40
+    },
+    {
+        "productUrl": "https://www.amazon.co.uk/Ticova-Ergonomic-Office-Chair-Adjustable/dp/B0B2Z624JL",
+        "productName": "Office Chair",
+        "currentPrice": 4
+    }
+    
+]
