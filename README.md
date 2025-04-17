@@ -19,6 +19,3 @@ The PriceTrackNotif is a Spring Boot application designed to monitor product pri
  ### Additional details
 API documentation, sample requests, and responses are located in the PriceTrackNotif/sample folder.
 For security, spring.mail.password is not included in application.properties. You must add your email and app-specific password to enable email notifications.
-
-
-- 
