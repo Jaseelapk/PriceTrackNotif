@@ -35,7 +35,8 @@ public class EmailService {
 			logger.debug("Email successfully sent to {}", toEmail);
 
 		} catch (Exception e) {
-			logger.error("Failed to send email to {}: {}", toEmail, e.getMessage(), e);
-		}
+            logger.error("Failed to send email to {}: {}", toEmail, e.getMessage(), e);
+            throw new RuntimeException("Failed to send email to " + toEmail, e);
+        }
 	}
 }
