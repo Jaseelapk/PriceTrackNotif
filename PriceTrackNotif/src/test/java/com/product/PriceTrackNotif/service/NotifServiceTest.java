@@ -92,7 +92,7 @@ public class NotifServiceTest {
 		verify(notifRepository, times(1)).save(captor.capture());
 		Notification savedNotification = captor.getValue();
 
-		assertEquals("Price drop detected and alert has been send successfully.", result);
+		assertEquals("Price drop detected and alert has been sent successfully.", result);
 		assertEquals("COMPLETED", savedNotification.getStatus());
 		verify(emailService, times(1)).sendNotification(anyString(), anyString(), anyString());
 	}
